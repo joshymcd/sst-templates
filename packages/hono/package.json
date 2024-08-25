@@ -1,0 +1,8 @@
+{
+  "name": "@joshymcd-sst-templates/hono",
+  "version": "0.0.0",
+  "dependencies": {
+    "hono": "^4.5.8",
+    "sst": "*"
+  }
+}
