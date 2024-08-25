@@ -1,0 +1,17 @@
+{
+  "name": "joshymcd-sst-templates",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "sst dev",
+    "deploy": "sst deploy"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "prettier": "^3.3.3",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "pnpm@9.8.0",
+  "dependencies": {
+    "sst": "^3"
+  }
+}
