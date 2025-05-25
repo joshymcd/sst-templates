@@ -3,14 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "sst dev",
-    "deploy": "sst deploy"
+    "deploy": "sst deploy",
+    "db:generate": "cd packages/db && sst shell drizzle-kit generate",
+    "db:migrate": "cd packages/db && sst shell drizzle-kit migrate",
+    "db:push": "cd packages/db && sst shell drizzle-kit push",
+    "db:studio": "cd packages/db && sst shell npx drizzle-kit studio"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "prettier": "^3.3.3",
-    "typescript": "5.5.4"
+    "@tsconfig/node20": "^20.1.5",
+    "prettier": "^3.5.3",
+    "typescript": "5.8.3"
   },
-  "packageManager": "pnpm@9.8.0",
+  "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "sst": "^3"
   }

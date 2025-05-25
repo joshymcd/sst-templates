@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "composite": true,
+    "paths": {
+      "@trippy/db": ["./src/index.ts"],
+      "@trippy/db/schema": ["./src/schema/index.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

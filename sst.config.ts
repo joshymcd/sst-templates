@@ -15,6 +15,8 @@ export default $config({
     };
   },
   async run() {
+    const postgresUrl = new sst.Secret("PostgresUrl");
+
     const hono = new sst.aws.Function("Hono", {
       url: true,
       handler: "packages/hono/src/index.handler",
@@ -31,9 +33,19 @@ export default $config({
       },
     });
 
+    new sst.x.DevCommand("Studio", {
+      dev: {
+        autostart: false,
+        command: "npx drizzle-kit studio",
+        directory: "packages/db",
+      },
+      link: [postgresUrl],
+    });
+
     return {
       hono: hono.url,
       vite: vite.url,
+      drizzleStudio: "https://local.drizzle.studio/",
     };
   },
 });
