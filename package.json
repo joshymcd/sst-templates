@@ -10,11 +10,11 @@
     "db:studio": "cd packages/db && sst shell npx drizzle-kit studio"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.5",
-    "prettier": "^3.5.3",
-    "typescript": "5.8.3"
+    "@tsconfig/node20": "^20.1.6",
+    "prettier": "^3.6.2",
+    "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@10.11.0",
+  "packageManager": "pnpm@10.14.0",
   "dependencies": {
     "sst": "^3"
   }
